@@ -5,27 +5,27 @@
 a = "Test"
 a = 'Test'
 
-#string ausgeben
+#print string
 print(a)
 
 
-#integer / float in string konvertieren
+#convert to string
 b = str(100)
 
-#Durch string loopen, chars ist hierbei der Buchstabe
+#loop trough a string
 for chars in a:
     print(chars)
 
 
-#string umkehren
+#reverse a string
 a = a[::-1]
 print(a)
 
-#.find Method, findet Position des Buchstaben, -1 wenn nicht gefunden
+#.find Method, finds a sustring in a string, returns -1 if not found, returns position of first letter of the substring
 x = a.find("T")
 print(x)
 
-#.count, zählt wie oft ein substring vorkommt
+#.count, counts how often a substring appears in a string
 fizz = "Ababababa"
 print(fizz.count("a"))
 
@@ -41,53 +41,69 @@ print("Hallo, {name}")
 item = 7
 print("%s is carrying %d items"%(name, item))
 
-#string Addition
+#string addition
 print(name+a)
 
-#string Multiplikation
+#string multiplication
 print(7*"a")
 
 #string seperation
 print("b",a)#Standard seperator = " "
-print("b",a,sep="TEST")#customizinh seperator
+print("b",a,sep="TEST")#customizing seperator
 
 
 string = "Various string methods"
 string2 = " investment in learning "
 
-print(string.lower())#in Kleinbuchstaben
+#lowercase
+print(string.lower())
 
-print(string.upper())#in Großbuchstaben
+#uppercase
+print(string.upper())
 
-print(string.islower())#Ist kleingeschrieben
+#is lowercase
+print(string.islower())
 
-print(string.isupper())#Ist großgeschrieben
+#is highercase
+print(string.isupper())
 
-print(string.startswith("Var"))#Beginnt mit
+#startswith
+print(string.startswith("Var"))
 
-print(string.endswith("el"))#Ended mit
+#endswith
+print(string.endswith("el"))
 
-print('-->'.join(['various', 'strings', 'methods']))#mit array verknüpfen
+#link with array
+print('-->'.join(['various', 'strings', 'methods']))
 
-print(string.split())#String in array splitten
+#String in array splitten
+print(string.split())
 
-print("hello".ljust(15, '*'))#Zeichen hinzufügen, Wort links
+#add chars, the word is on the left
+print("hello".ljust(15, '*'))
 
-print("hello".rjust(15, '*'))#Zeichen hinzufügen, Wort rechts
+#add chars, the word is on the right side
+print("hello".rjust(15, '*'))
 
-print("welcome".center(20, '*'))#Wort zentriert in der Mitte
+#center the word in the middle
+print("welcome".center(20, '*'))
 
-print(string2.strip())#Leerzeichen links und rechts entfernen
+#remove spaces on both sides
+print(string2.strip())
 
-print(string2.lstrip())#Leerzeichen links entfernen
+#remove spaces on left side only
+print(string2.lstrip())
 
-print(string2.rstrip())#Leerzeichen rechts entfernen
+#remove spaces on right side only
+print(string2.rstrip())
 
 
+#find index of a substring
 string = "object oriented programming"
-print("index of 'r' in:'", string, "':", string.index('r'))#Index eines substrings heruasfinden
+print("index of 'r' in:'", string, "':", string.index('r'))
 
-print("replacing 'e' with '3' :", string.replace('e', '3'))#String ersetzen
+#replace method
+print("replacing 'e' with '3' :", string.replace('e', '3'))
 
 
 

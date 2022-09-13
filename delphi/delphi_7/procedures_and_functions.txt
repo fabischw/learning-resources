@@ -1,0 +1,71 @@
+//cheatsheet for borland delphi 7 second edition
+
+
+
+//BUTTON PROCEDURE
+
+                                    //button click procedure
+procedure TForm1.Button1Click(Sender: TObject);
+                                    //declare variables and types BEFORE using themp
+var n:integer;
+var x: string;
+begin                               //begin the main chunk
+
+anzahl:=0;                          //declare variable in code block
+listbox1.items.clear;               //clear listbox
+listbox1.items.add(inttostr(anzahl))//add item to listbox
+n:=strtoint(edit1.text);     
+movedisks(n,1,3,2);                 //start a procedure  
+label1.caption:=inttostr(anzahl);   //change a label captions
+
+end;                                //End the main chunk
+
+
+
+//CUSTOM PROCEDURE
+
+
+
+                                    //custom procedure
+procedure Tform1.movedisks(zahl,von,zu,hilf:integer);
+begin
+
+if zahl=1 then move(von,zu)         //if statement
+else begin                          //else statement
+movedisks(zahl-1,von,hilf,zu);     
+move(von,zu);
+movedisks(zahl-1,hilf,zu,von);
+end;                                //end else statement
+
+end;                                //end main chunk
+
+
+
+//DECLARE CUSTOM PROCEDURE
+
+//declare priate procedures at the top
+procedure movedisks(zahl,von,zu, hilf:integer);
+    { Private declarations }
+
+
+
+
+//WORKING WITH ARRAYS
+
+procedure TForm1.Button1Click(Sender: TObject);
+  var x,y, i: integer;
+      schrift: array[1..5] of string;   //array decleration, 5 long, type string, starts at 1
+  begin
+  randomize;                            //random Modul
+  x:=random(500);
+  y:=random(500);
+  i:=random(4)+1;
+  schrift[1]:='Auf gehts!';             //Strings in Array schreiben
+  schrift[2]:='Fang mich!';
+  schrift[3]:='los los los!';
+  schrift[4]:='hier bin ich!';
+  schrift[5]:='auf auf!';
+  huepf(x,y,schrift[i]);
+
+
+  end;
