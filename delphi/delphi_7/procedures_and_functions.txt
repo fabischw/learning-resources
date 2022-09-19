@@ -54,18 +54,62 @@ procedure movedisks(zahl,von,zu, hilf:integer);
 
 procedure TForm1.Button1Click(Sender: TObject);
   var x,y, i: integer;
-      schrift: array[1..5] of string;   //array decleration, 5 long, type string, starts at 1
+      schrift: array[1..5] of string;   //array decleration, 5 max val, type string, starts at 1
   begin
   randomize;                            //random Modul
   x:=random(500);
   y:=random(500);
   i:=random(4)+1;
-  schrift[1]:='Auf gehts!';             //Strings in Array schreiben
+  schrift[1]:='Auf gehts!';             //input data into array
   schrift[2]:='Fang mich!';
   schrift[3]:='los los los!';
   schrift[4]:='hier bin ich!';
   schrift[5]:='auf auf!';
-  huepf(x,y,schrift[i]);
+  huepf(x,y,schrift[i]);                //get data from array index
 
 
   end;
+
+
+//FOR LOOP
+
+procedure TForm1.Button1Click(Sender: TObject);
+var a,b,c,summe: integer;
+begin
+summe:=0;
+a:=strtoint(Edit1.text);                //read data from input Edit
+b:=strtoint(Edit2.Text);
+if a>b then
+   begin
+  c:=a;
+  a:=b;
+  b:=c;
+  end;
+
+REPEAT                                  //begin loop
+summe:=summe+a;
+a:=a+1;
+
+UNTIL a=b+1;                            //exit statement
+
+label1.Caption:='Die Summe der Zahlen von ' + Edit1.Text + ' bis ' + inttostr(b) + ' ist: ' + inttostr(summe);
+end;
+
+
+
+
+//FUNCTION DECLERATION
+//RECURSION
+
+function ggt(a,b:integer):integer;   
+begin
+if a=b then   
+  ggt:= a                          
+else
+  begin
+  if a>b then        
+  ggt:= ggt(a-b, b)   
+  else
+  ggt:= ggt(a, b-a)      
+  end;
+ end;
