@@ -7,3 +7,4 @@ Collection of resources for Delphi 7 Second Edition (this version is still used 
 - different very common data types and their implementation is Delphi 7 
 - random modules
 - control flow implementation (if/else/elif)
+- recursion
