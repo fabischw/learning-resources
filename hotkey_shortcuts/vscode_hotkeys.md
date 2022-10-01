@@ -9,6 +9,7 @@
 | BASIC                        | Ctrl + V         | insert previously copied text from clipboard |                 |
 | BASIC                        | Ctrl + X         | cut text                                     |                 |
 | BASIC                        | Ctrl + Z         | undo action                                  |                 |
+| BASIC                        | Ctrl + y         | redo action                                  |                 |
 | BASIC                        | Ctrl + S         | save file                                    |                 |
 | BASIC                        | Ctrl + F         | search file                                  |                 |
 | BASIC                        | Ctrl + O         | open file                                    |                 |
@@ -24,3 +25,5 @@
 | EASY                         | Ctrl + /         | comment line                                 |                 |
 | EASY                         | Ctrl + Ö         | open terminal                                |                 |
 | EASY                         | Ctrl + Shift + V | open markdown preview                        |                 |
+| EASY                         | Ctrl + Shift + K | delete line                                  |                 |
+| EASY                         | Ctrl + Enter     | insert line below                            |                 |
